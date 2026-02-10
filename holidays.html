@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notices | College Academic Portal</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: #eef1f4;
+        }
+
+        /* ================= TOP NAVBAR ================= */
+        .navbar {
+            height: 70px;
+            background-color: #1f2a40;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 25px;
+            justify-content: space-between;
+        }
+
+        .navbar-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .navbar img {
+            height: 45px;
+        }
+
+        .navbar h2 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .navbar span {
+            font-size: 13px;
+            opacity: 0.8;
+        }
+
+        /* ================= LAYOUT ================= */
+        .layout {
+            display: flex;
+            min-height: calc(100vh - 70px);
+        }
+
+        /* ================= SIDEBAR ================= */
+        .sidebar {
+            width: 240px;
+            background-color: #27344f;
+            color: white;
+            padding-top: 20px;
+        }
+
+        .sidebar h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 16px;
+            opacity: 0.8;
+        }
+
+        .menu a {
+            display: block;
+            padding: 14px 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .menu a:hover,
+        .menu a.active {
+            background-color: #1f2a40;
+        }
+
+        /* ================= CONTENT ================= */
+        .content {
+            flex: 1;
+            padding: 25px;
+        }
+
+        .page-title {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* ================= NOTICE CARDS ================= */
+        .notice {
+            background-color: white;
+            padding: 22px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            font-size: 12px;
+            border-radius: 4px;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .exam { background-color: #e74c3c; }
+        .fees { background-color: #27ae60; }
+        .holiday { background-color: #2980b9; }
+        .general { background-color: #8e44ad; }
+
+        .notice h3 {
+            margin: 10px 0 8px;
+        }
+
+        .meta {
+            font-size: 12px;
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 12px;
+            padding: 15px;
+            color: #666;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<div class="navbar">
+    <div class="navbar-left">
+        <img src="logo.png" alt="College Logo">
+        <div>
+            <h2>College Academic Portal</h2>
+            <span>Official Notice & Notification System</span>
+        </div>
+    </div>
+    <div>
+        Semester : II | AY 2025–26
+    </div>
+</div>
+
+<!-- ================= LAYOUT ================= -->
+<div class="layout">
+
+    <!-- ========== SIDEBAR ========== -->
+    <div class="sidebar">
+        <h3>STUDENT MENU</h3>
+        <div class="menu">
+            <a href="index.html">Dashboard</a>
+            <a href="notices.html" class="active">Notices</a>
+            <a href="examinations.html">Examinations</a>
+            <a href="fees.html">Fee Details</a>
+            <a href="holidays.html">Holidays</a>
+            <a href="contact.html">Contact Office</a>
+        </div>
+    </div>
+
+    <!-- ========== CONTENT ========== -->
+    <div class="content">
+
+        <div class="page-title">📢 Official Notices</div>
+
+        <!-- NOTICE 1 -->
+        <div class="notice">
+            <span class="badge exam">📝 EXAM</span>
+            <h3>Mid-Semester Examination Schedule</h3>
+            <div class="meta">Examination Cell | 20 Feb 2026</div>
+            <p>
+                Mid-Semester examinations will commence from 
+                <b>10 March 2026</b>. Students are advised to check the 
+                examination timetable and prepare accordingly.
+            </p>
+        </div>
+
+        <!-- NOTICE 2 -->
+        <div class="notice">
+            <span class="badge fees">💰 FEES</span>
+            <h3>Semester Fee Payment Deadline</h3>
+            <div class="meta">Accounts Section | 18 Feb 2026</div>
+            <p>
+                The last date for payment of Semester-II tuition fees is 
+                <b>5 March 2026</b>. Late payment may attract penalties.
+            </p>
+        </div>
+
+        <!-- NOTICE 3 -->
+        <div class="notice">
+            <span class="badge holiday">🎉 HOLIDAY</span>
+            <h3>College Holiday Announcement</h3>
+            <div class="meta">Administration | 15 Feb 2026</div>
+            <p>
+                The college will remain closed on 
+                <b>1 March 2026</b> on account of an official holiday.
+            </p>
+        </div>
+
+        <!-- NOTICE 4 -->
+        <div class="notice">
+            <span class="badge general">📌 GENERAL</span>
+            <h3>Library Timing Update</h3>
+            <div class="meta">Library Department | 12 Feb 2026</div>
+            <p>
+                The central library will remain open till 
+                <b>8:00 PM</b> on all working days starting this semester.
+            </p>
+        </div>
+
+        <footer>
+            © 2026 College Academic Portal | All Rights Reserved
+        </footer>
+
+    </div>
+</div>
+
+</body>
+</html>

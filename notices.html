@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notices | College Academic Portal</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: #eef1f4;
+        }
+
+        /* ================= TOP NAVBAR ================= */
+        .navbar {
+            height: 70px;
+            background-color: #1f2a40;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 25px;
+            justify-content: space-between;
+        }
+
+        .navbar-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .navbar img {
+            height: 45px;
+        }
+
+        .navbar h2 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .navbar span {
+            font-size: 13px;
+            opacity: 0.8;
+        }
+
+        /* ================= LAYOUT ================= */
+        .layout {
+            display: flex;
+            min-height: calc(100vh - 70px);
+        }
+
+        /* ================= SIDEBAR ================= */
+        .sidebar {
+            width: 240px;
+            background-color: #27344f;
+            color: white;
+            padding-top: 20px;
+        }
+
+        .sidebar h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 16px;
+            opacity: 0.8;
+        }
+
+        .menu a {
+            display: block;
+            padding: 14px 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .menu a:hover,
+        .menu a.active {
+            background-color: #1f2a40;
+        }
+
+        /* ================= CONTENT ================= */
+        .content {
+            flex: 1;
+            padding: 25px;
+        }
+
+        .page-title {
+            font-size: 22px;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        /* ================= NOTICE CARDS ================= */
+        .notice {
+            background-color: white;
+            padding: 22px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 10px;
+            font-size: 12px;
+            border-radius: 4px;
+            color: white;
+        }
+
+        .exam { background-color: #e74c3c; }
+        .fees { background-color: #27ae60; }
+        .holiday { background-color: #2980b9; }
+
+        .notice h3 {
+            margin-top: 10px;
+        }
+
+        .meta {
+            font-size: 12px;
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        .status {
+            font-size: 13px;
+            font-weight: bold;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        /* ================= REGISTER BOX ================= */
+        .register-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        select {
+            padding: 10px;
+            width: 300px;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 12px;
+            padding: 15px;
+            color: #666;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<div class="navbar">
+    <div class="navbar-left">
+        <img src="logo.png" alt="College Logo">
+        <div>
+            <h2>College Academic Portal</h2>
+            <span>Official Notice & Notification System</span>
+        </div>
+    </div>
+    <div>
+        Semester : II | AY 2025–26
+    </div>
+</div>
+
+<!-- ================= LAYOUT ================= -->
+<div class="layout">
+
+    <!-- ========== SIDEBAR ========== -->
+    <div class="sidebar">
+        <h3>STUDENT MENU</h3>
+        <div class="menu">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="notices.html" class="active">Notices</a>
+            <a href="examinations.html">Examinations</a>
+            <a href="fees.html">Fee Details</a>
+            <a href="holidays.html">Holidays</a>
+            <a href="contact.html">Contact Office</a>
+        </div>
+    </div>
+
+    <!-- ========== CONTENT ================= -->
+    <div class="content">
+
+        <div class="page-title">📢 College Notices</div>
+
+        <!-- REGISTER NUMBER SELECTION -->
+        <div class="register-box">
+            <h3>Select Register Number</h3>
+            <select id="regDropdown">
+                <option value="">-- Select Register Number --</option>
+            </select>
+        </div>
+
+        <!-- NOTICE 1 -->
+        <div class="notice" data-notice="exam">
+            <span class="badge exam">EXAM</span>
+            <h3>Mid-Semester Examination Schedule</h3>
+            <div class="meta">Posted by Examination Cell | 20 Feb 2026</div>
+            <p>Mid-Semester examinations will begin from <b>10 March</b>. 📚</p>
+
+            <input type="checkbox" class="ackBox"> I have read this notice
+            <p>Acknowledged: <span class="ackCount">0</span></p>
+            <span class="status">Status: Active</span>
+        </div>
+
+        <!-- NOTICE 2 -->
+        <div class="notice" data-notice="fees">
+            <span class="badge fees">FEES</span>
+            <h3>Semester Fee Payment Deadline</h3>
+            <div class="meta">Posted by Accounts Section | 18 Feb 2026</div>
+            <p>Last date for semester fee payment is <b>5 March</b>. 💰</p>
+
+            <input type="checkbox" class="ackBox"> I have read this notice
+            <p>Acknowledged: <span class="ackCount">0</span></p>
+            <span class="status">Status: Active</span>
+        </div>
+
+        <!-- NOTICE 3 -->
+        <div class="notice" data-notice="holiday">
+            <span class="badge holiday">HOLIDAY</span>
+            <h3>College Holiday Announcement</h3>
+            <div class="meta">Posted by Administration | 15 Feb 2026</div>
+            <p>College will remain closed on <b>1 March</b>. 🌴</p>
+
+            <input type="checkbox" class="ackBox"> I have read this notice
+            <p>Acknowledged: <span class="ackCount">0</span></p>
+            <span class="status" style="color:red;">Status: Expired</span>
+        </div>
+
+        <footer>
+            © 2026 College Academic Portal | All Rights Reserved
+        </footer>
+
+    </div>
+</div>
+
+<script>
+    const dropdown = document.getElementById("regDropdown");
+
+    // Generate register numbers 24PA1A05C8 → 24PA1A05I7
+    const letters = ["C","D","E","F","G","H","I"];
+    letters.forEach(l => {
+        let start = (l === "C") ? 8 : 0;
+        let end = (l === "I") ? 7 : 9;
+        for (let i = start; i <= end; i++) {
+            const option = document.createElement("option");
+            option.value = `24PA1A05${l}${i}`;
+            option.textContent = `24PA1A05${l}${i}`;
+            dropdown.appendChild(option);
+        }
+    });
+
+    // LE numbers
+    for(let le = 21; le <= 33; le++){
+        const option = document.createElement("option");
+        option.value = `LE${le}`;
+        option.textContent = `LE${le}`;
+        dropdown.appendChild(option);
+    }
+
+    const acknowledgements = { exam: [], fees: [], holiday: [] };
+
+    document.querySelectorAll(".notice").forEach(n => {
+        const type = n.dataset.notice;
+        const box = n.querySelector(".ackBox");
+        const count = n.querySelector(".ackCount");
+
+        box.addEventListener("click", e => {
+            if(!dropdown.value){
+                alert("Please select your Register Number first");
+                e.preventDefault();
+                box.checked = false;
+                return;
+            }
+
+            if(acknowledgements[type].includes(dropdown.value)){
+                alert("Already acknowledged");
+                box.checked = true;
+                box.disabled = true;
+                return;
+            }
+
+            acknowledgements[type].push(dropdown.value);
+            count.textContent = acknowledgements[type].length;
+            box.disabled = true;
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Login | College Academic Portal</title>
+
+<style>
+body{
+    margin:0;
+    font-family:"Segoe UI",Arial;
+    background:linear-gradient(135deg,#1f2a40,#3a4f7a);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.login-box{
+    background:white;
+    width:380px;
+    padding:35px;
+    border-radius:10px;
+    box-shadow:0 15px 40px rgba(0,0,0,.3);
+    text-align:center;
+}
+
+.login-box img{
+    height:60px;
+    margin-bottom:10px;
+}
+
+.login-box h2{
+    margin:10px 0 5px;
+}
+
+.login-box span{
+    font-size:13px;
+    color:#666;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin-top:15px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    font-size:15px;
+}
+
+button{
+    width:100%;
+    margin-top:20px;
+    padding:12px;
+    background:#1f2a40;
+    color:white;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#27344f;
+}
+
+.error{
+    color:red;
+    font-size:14px;
+    margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-box">
+    <img src="logo.png">
+    <h2>Admin Login</h2>
+    <span>College Academic Portal</span>
+
+    <input type="text" id="username" placeholder="Admin Username">
+    <input type="password" id="password" placeholder="Password">
+
+    <button onclick="login()">Login</button>
+
+    <div id="error" class="error"></div>
+</div>
+
+<script>
+function login(){
+    const user = document.getElementById("username").value;
+    const pass = document.getElementById("password").value;
+
+    // TEMP ADMIN CREDENTIALS
+    if(user === "admin" && pass === "admin123"){
+        window.location.href = "admin-dashboard.html";
+    } else {
+        document.getElementById("error").innerText =
+        "Invalid admin credentials";
+    }
+}
+</script>
+<div class="sidebar">
+    <a href="index.html">🏠 Dashboard</a>
+    <a href="notices.html">📢 Notices</a>
+    <a href="examinations.html">📝 Examinations</a>
+    <a href="fees.html">💰 Fee Details</a>
+    <a href="holidays.html">🎉 Holidays</a>
+    <a href="contact.html">☎ Contact Office</a>
+</div>
+
+</body>
+</html>
