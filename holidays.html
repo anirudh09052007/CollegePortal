@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Notices | College Academic Portal</title>
+    <title>Holidays - College Academic Portal</title>
 
     <style>
+        /* ================= RESET ================= */
         * {
             box-sizing: border-box;
         }
@@ -78,22 +79,17 @@
         .menu a:hover,
         .menu a.active {
             background-color: #1f2a40;
+            font-weight: bold;
         }
 
-        /* ================= CONTENT ================= */
+        /* ================= MAIN CONTENT ================= */
         .content {
             flex: 1;
             padding: 25px;
         }
 
-        .page-title {
-            font-size: 22px;
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        /* ================= NOTICE CARDS ================= */
-        .notice {
+        /* ================= HOLIDAYS ================= */
+        .holiday-card {
             background-color: white;
             padding: 22px;
             border-radius: 8px;
@@ -101,28 +97,19 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.08);
         }
 
-        .badge {
-            display: inline-block;
-            padding: 6px 12px;
-            font-size: 12px;
-            border-radius: 4px;
-            color: white;
-            margin-bottom: 10px;
+        .holiday-card h3 {
+            margin-top: 0;
+            color: #2980b9;
         }
 
-        .exam { background-color: #e74c3c; }
-        .fees { background-color: #27ae60; }
-        .holiday { background-color: #2980b9; }
-        .general { background-color: #8e44ad; }
-
-        .notice h3 {
-            margin: 10px 0 8px;
+        .holiday-card p {
+            font-size: 15px;
+            margin: 8px 0;
         }
 
-        .meta {
-            font-size: 12px;
-            color: #777;
-            margin-bottom: 10px;
+        .emoji {
+            font-size: 18px;
+            margin-right: 6px;
         }
 
         footer {
@@ -130,7 +117,6 @@
             font-size: 12px;
             padding: 15px;
             color: #666;
-            margin-top: 30px;
         }
     </style>
 </head>
@@ -147,7 +133,7 @@
         </div>
     </div>
     <div>
-        Semester : II | AY 2025–26
+        Semester: II | AY 2025–26
     </div>
 </div>
 
@@ -159,68 +145,45 @@
         <h3>STUDENT MENU</h3>
         <div class="menu">
             <a href="index.html">Dashboard</a>
-            <a href="notices.html" class="active">Notices</a>
+            <a href="notices.html">Notices</a>
             <a href="examinations.html">Examinations</a>
             <a href="fees.html">Fee Details</a>
-            <a href="holidays.html">Holidays</a>
+            <a href="holidays.html" class="active">Holidays</a>
             <a href="contact.html">Contact Office</a>
         </div>
     </div>
 
     <!-- ========== CONTENT ========== -->
     <div class="content">
+        <h1>📅 College Holidays</h1>
 
-        <div class="page-title">📢 Official Notices</div>
-
-        <!-- NOTICE 1 -->
-        <div class="notice">
-            <span class="badge exam">📝 EXAM</span>
-            <h3>Mid-Semester Examination Schedule</h3>
-            <div class="meta">Examination Cell | 20 Feb 2026</div>
-            <p>
-                Mid-Semester examinations will commence from 
-                <b>10 March 2026</b>. Students are advised to check the 
-                examination timetable and prepare accordingly.
-            </p>
+        <div class="holiday-card">
+            <h3>🎉 Republic Day</h3>
+            <p>Date: 26th January 2026</p>
+            <p>Enjoy the national holiday! College remains closed.</p>
         </div>
 
-        <!-- NOTICE 2 -->
-        <div class="notice">
-            <span class="badge fees">💰 FEES</span>
-            <h3>Semester Fee Payment Deadline</h3>
-            <div class="meta">Accounts Section | 18 Feb 2026</div>
-            <p>
-                The last date for payment of Semester-II tuition fees is 
-                <b>5 March 2026</b>. Late payment may attract penalties.
-            </p>
+        <div class="holiday-card">
+            <h3>🏫 Founder's Day</h3>
+            <p>Date: 1st March 2026</p>
+            <p>Celebrating the college foundation. College closed for students.</p>
         </div>
 
-        <!-- NOTICE 3 -->
-        <div class="notice">
-            <span class="badge holiday">🎉 HOLIDAY</span>
-            <h3>College Holiday Announcement</h3>
-            <div class="meta">Administration | 15 Feb 2026</div>
-            <p>
-                The college will remain closed on 
-                <b>1 March 2026</b> on account of an official holiday.
-            </p>
+        <div class="holiday-card">
+            <h3>🌸 Holi Festival</h3>
+            <p>Date: 10th March 2026</p>
+            <p>Festive holiday for all students and staff.</p>
         </div>
 
-        <!-- NOTICE 4 -->
-        <div class="notice">
-            <span class="badge general">📌 GENERAL</span>
-            <h3>Library Timing Update</h3>
-            <div class="meta">Library Department | 12 Feb 2026</div>
-            <p>
-                The central library will remain open till 
-                <b>8:00 PM</b> on all working days starting this semester.
-            </p>
+        <div class="holiday-card">
+            <h3>🎊 Independence Day</h3>
+            <p>Date: 15th August 2026</p>
+            <p>National holiday — college will remain closed.</p>
         </div>
 
         <footer>
             © 2026 College Academic Portal | All Rights Reserved
         </footer>
-
     </div>
 </div>
 
